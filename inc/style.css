@@ -1,0 +1,155 @@
+div.rounded {
+   
+	border: 3px dotted gray;
+	margin: auto;
+  width: 70%;
+  color: #000000;
+  font-weight: bold;
+	padding: 1px;
+	
+  -moz-border-radius: 5px;
+	-webkit-border-radius: 10px; }
+ 
+	div.kotak {
+	 background-color: maroon;
+	 margin: auto;
+   width: 20%;
+	 color: #000000;
+	 padding: 1px;
+	 
+	 -moz-border-radius: 5px;
+	 -webkit-border-radius: 20px; }    
+ 
+	img {
+   border-radius: 50%;
+   border: 2px solid gold;
+   padding: 1px;
+  
+ }
+ img:hover {
+   -webkit-transform: rotate(1000deg) scale(1.0);
+	 transform: rotate(1000deg) scale(1.0);
+	 -webkit-transition: .8s ease-in-out;
+	 transition: .8s ease-in-out;
+ }
+ 
+ 
+ #steal a{
+	 padding:5px 5px;
+	 margin:1;
+	 background:crimson;
+	 text-decoration:none;
+	 letter-spacing:1px;
+	 -moz-border-radius: 10px; -webkit-border-radius: 5px; -khtml-border-radius: 5px; border-radius: 5px;
+ }
+ #steal a:hover{
+	 background:gray;
+	 border-bottom:5px solid #red;
+	 border-top:5px solid #red;
+ }
+ 
+ section {
+   float: left;
+   margin: auto;
+   width: 50%;
+ }
+ html, body{
+	 margin: 0;
+ 
+	 padding: 0;
+ 
+	 min-width: 100%;
+	 width: 100%;
+	 max-width: 100%;
+ 
+	 min-height: 100%;
+	 height: 100%;
+	 max-height: 100%;
+ }
+ a {
+   color: white;
+ }
+ 
+
+ .toto {
+	text-align: center;
+  }
+ .toto pre {
+   display: inline-block;
+   text-align: left;
+  }
+  
+ .koceng {
+	text-align: center;
+  }
+ 
+ .koceng pre {
+   display: inline-block;
+   text-align: left;
+  } 
+  .intro {
+   margin: auto;
+   background-color: #f7f3f3;
+   width: 20%;
+   
+   padding: 10px;
+   -moz-border-radius: 5px;
+	 -webkit-border-radius: 20px;
+ }
+ 
+ A.class2 {color:blue;}
+ .w3-round-small{border-radius:2px}.w3-round,.w3-round-medium{border-radius:4px}.w3-round-large{border-radius:8px}.w3-round-xlarge{border-radius:16px}.w3-round-xxlarge{border-radius:32px}
+ .memek {
+	margin: auto;
+	background-color: #f7f3f3;
+	width: 50%;
+	
+	padding: 10px;
+	-moz-border-radius: 5px;
+	  -webkit-border-radius: 30px;
+  }
+  
+  .bokong {
+	margin: auto;
+	text-align: center;
+	width: 100%;
+	padding: 1px;
+  }
+
+  .bordergaya{
+	background:black;
+	color:white;
+	margin:0 10px;
+	font-family:Ubuntu Mono;
+	font-size:16px;
+	border:2px solid #2d2b2b;
+
+}
+.bordergaya:hover{
+	background:#2d2b2b;
+	color:white;
+	margin:0 10px;
+	font-family:Ubuntu Mono;
+	font-size:16px;
+	border:2px solid crimson;
+}
+
+.dog {
+	margin: auto;
+	background-color: maroon;
+	width: 20%;
+	padding: 10px;
+	-moz-border-radius: 5px;
+	  -webkit-border-radius: 30px;
+	
+  }
+  
+  .kotakwal {
+	margin: auto;
+	background-color: #f7f3f3;
+	width: 90%;
+	
+	padding: 10px;
+	-moz-border-radius: 5px;
+	  -webkit-border-radius: 30px;
+  }

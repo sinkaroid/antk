@@ -1,0 +1,11 @@
+{
+    "name": "bib/antifansub",
+    "description": "decrypt\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[Clink decrypt",
+    "authors": [
+        {
+            "name": "sinkaroid",
+            "email": "bibsindra@gmail.com"
+        }
+    ],
+    "require": {}
+}
