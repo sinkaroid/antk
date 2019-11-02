@@ -3,7 +3,7 @@
 
 `composer require bib/antifansub`  
 
-**AntiID** - i create a Trash tools do autobypass,scrap,decrypt and find the final url (*indonesia Fansubber*), then we parsing it to our repo, I choose some of the good among them(maybe)  
+**AntiID** - Anime Scraper
 
 * Nginx 
 * CLi  
@@ -22,16 +22,15 @@ $ ./anti
 
 
 ```php
-require 'inc/str.php'; #main
-require_once(realpath(dirname(__FILE__) . '/../inc/str.php')); #multiple pagecontent
+require_once(realpath(dirname(__FILE__) . '/../inc/str.php')); 
 
 ```  
   
   
 ## Discord
-integerate this repo to hookbot  
+integrate to hookbot  
 ![](https://1.bp.blogspot.com/-g8H_KN6i_E0/XWENevaokLI/AAAAAAAAJqE/6Ri4bWy5oHENFyNI27FE_aXVYf5T_8TsgCLcBGAs/s1600/Screenshot_105.png)
-
+  
 ```
 $ cd Antifansub/page/feed  
 $ code index.php #vscode  

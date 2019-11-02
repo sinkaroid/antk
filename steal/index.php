@@ -1,4 +1,4 @@
-<title>Antifansub | Download</title>
+
 <link href="http://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" type="text/css">
 <meta property="og:title" content="Anti | Download" />
 <meta property="og:type" content="AntifansubID" />
@@ -104,20 +104,22 @@ if ( preg_match($regex, $page, $list) )
 
 //sinopsis
 $regex = '/<div class="cover">(.*?)<\/div>/s';
-if ( preg_match($regex, $page, $list) )
+if ( preg_match($regex, $page, $listx) )
 
-    echo '<center>',$list[0],'</div>'; 
+    echo '<center>',$listx[0],'</div>'; 
 
 
 //link    
 $regex = '/<div class="smokeddl">(.*?)<div class="anito-shortlink" id=(.*?)">/s';
-if ( preg_match($regex, $page, $list) )
+if ( preg_match($regex, $page, $lost) )
 	
-    echo '<center><div class="rounded">',$list[0],'</div></div><br>'; 
+    echo '<center><div class="rounded">',$lost[0],'</div></div><br>'; 
 else 
     print "Not found";
 
 }
+
+
 
 ?>
 </div></div></div>
