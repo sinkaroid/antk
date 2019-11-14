@@ -1,9 +1,7 @@
 # Anti
-![](https://img.shields.io/badge/codename-kato-hotpink) ![](https://img.shields.io/badge/php-%3E%3D5.3.9-blue.svg) ![](https://img.shields.io/pypi/pyversions/3) ![](https://img.shields.io/github/last-commit/sinkaroid/antifansub)  
+[![CodeFactor](https://www.codefactor.io/repository/github/sinkaroid/anti/badge)](https://www.codefactor.io/repository/github/sinkaroid/anti) ![](https://img.shields.io/badge/php-%3E%3D5.3.9-blue.svg)  
 
-`composer require bib/antifansub`  
-
-## argument  
+## parameter  
 - `?home` main  
 - `page/?x={1..99}` page  
 - `page/list/anime.php?q=$argv[0]` query  

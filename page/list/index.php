@@ -8,7 +8,7 @@
 
 
   body { 
-   background: black url("/antifansub/inc/bg.png") no-repeat fixed center; 
+   background: black url("/inc/bg.png") no-repeat fixed center; 
  }
  a {
    color: green;

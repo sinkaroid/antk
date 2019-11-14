@@ -42,7 +42,7 @@
 <a href="/?chart" rel="nofollow" target="_blank"><b>fullschedule</b></a></div><br>
 </font>
 <br>
-<form action="page/list/anime.php" method="get">
+<form action="/page/list/anime.php" method="get">
 query : <input type="show" class="bordergaya" style="width:10%;" placeholder="series" name="q"><br>
 </form>
 <center>

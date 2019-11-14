@@ -1,12 +1,12 @@
 <title>AntifansubID</title>
 <link href="http://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="/inc/style.css">
 <?php $start_time = microtime(true); ?>
 
 <script type="text/javascript" src="/inc/rain.js"></script> 
 <style>
   body { 
-   background: black url("/antifansub/inc/a.png") no-repeat fixed center; 
+   background: black url("/inc/a.png") no-repeat fixed center; 
  }
  
 </style>
