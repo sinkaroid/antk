@@ -7,7 +7,7 @@ div.rounded {
   font-weight: bold;
 	padding: 1px;
 	
-  -moz-border-radius: 5px;
+  border-radius: 5px;
 	-webkit-border-radius: 10px; }
  
 	div.kotak {
@@ -17,7 +17,7 @@ div.rounded {
 	 color: #000000;
 	 padding: 1px;
 	 
-	 -moz-border-radius: 5px;
+	 border-radius: 5px;
 	 -webkit-border-radius: 20px; }    
  
 	img {
@@ -93,7 +93,7 @@ div.rounded {
    width: 30%;
    
    padding: 10px;
-   -moz-border-radius: 5px;
+   border-radius: 5px;
 	 -webkit-border-radius: 20px;
  }
  
@@ -105,7 +105,7 @@ div.rounded {
 	width: 50%;
 	
 	padding: 10px;
-	-moz-border-radius: 5px;
+	border-radius: 5px;
 	  -webkit-border-radius: 30px;
   }
   

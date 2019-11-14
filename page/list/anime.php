@@ -30,7 +30,7 @@ $tanggal= mktime(date("m"),date("d"),date("Y"));
 echo "[<font color=green>d</font> : <b>(".date("d-M-Y", $tanggal).")</b> ";
 date_default_timezone_set('Asia/Jakarta');
 $jam=date("H:i:s");
-echo "-> <font color=green>t</font> : <b>(". $jam.") "."</b> -> ";
+echo "-> <font color=green>t</font> : <b>(". $jam.") </b> -> ";
 $a = date ("H");
 if (($a>=6) && ($a<=11)){
 echo "<font color=white><b>Morning</font></b>]";

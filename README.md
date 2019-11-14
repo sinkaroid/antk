@@ -3,16 +3,6 @@
 
 `composer require bib/antifansub`  
 
-**AntiID** - Anime Scraper
-
-* Nginx 
-* CLi  
-
-```
-$ cd Antifansub/steal  
-$ ./anti
-```  
-
 ## argument  
 - `?home` main  
 - `page/?x={1..99}` page  
@@ -23,18 +13,12 @@ $ ./anti
 
 ```php
 require_once(realpath(dirname(__FILE__) . '/../inc/str.php')); 
-
 ```  
-  
-  
+
 ## Discord
 integrate to hookbot  
-![](https://1.bp.blogspot.com/-g8H_KN6i_E0/XWENevaokLI/AAAAAAAAJqE/6Ri4bWy5oHENFyNI27FE_aXVYf5T_8TsgCLcBGAs/s1600/Screenshot_105.png)
-  
-```
-$ cd Antifansub/page/feed  
-$ code index.php #vscode  
-```  
+![](https://1.bp.blogspot.com/-g8H_KN6i_E0/XWENevaokLI/AAAAAAAAJqE/6Ri4bWy5oHENFyNI27FE_aXVYf5T_8TsgCLcBGAs/s1600/Screenshot_105.png)  
+
 ```php
 function sed($t)
 {
@@ -45,5 +29,4 @@ function sed($t)
     return $sed;
 } # if necessary or u can use your own rss fetcher
 ```
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
+

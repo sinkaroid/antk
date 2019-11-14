@@ -9,8 +9,6 @@
  */
 
 /*jslint nomen: true, plusplus: true, sloppy: true, vars: true, white: true */
-/*global window, document, navigator, clearInterval, setInterval */
-
 var snowStorm = (function(window, document) {
 
   // --- common properties ---
@@ -177,8 +175,7 @@ var snowStorm = (function(window, document) {
         // absolute top.
         o.style.right = (100-(x/screenX*100)) + '%';
         o.style.top = (Math.min(y, docHeight-storm.flakeHeight)) + 'px';
-
-      }
+  }
 
     }
 
@@ -418,48 +415,7 @@ var snowStorm = (function(window, document) {
       }
     };
 
-    this.move = function() {
-      var vX = s.vX*windOffset, yDiff;
-      s.x += vX;
-      s.y += (s.vY*s.vAmp);
-      if (s.x >= screenX || screenX-s.x < storm.flakeWidth) { // X-axis scroll check
-        s.x = 0;
-      } else if (vX < 0 && s.x-storm.flakeLeftOffset < -storm.flakeWidth) {
-        s.x = screenX-storm.flakeWidth-1; // flakeWidth;
-      }
-      s.refresh();
-      yDiff = screenY+scrollY-s.y+storm.flakeHeight;
-      if (yDiff<storm.flakeHeight) {
-        s.active = 0;
-        if (storm.snowStick) {
-          s.stick();
-        } else {
-          s.recycle();
-        }
-      } else {
-        if (storm.useMeltEffect && s.active && s.type < 3 && !s.melting && Math.random()>0.998) {
-          // ~1/1000 chance of melting mid-air, with each frame
-          s.melting = true;
-          s.melt();
-          // only incrementally melt one frame
-          // s.melting = false;
-        }
-        if (storm.useTwinkleEffect) {
-          if (s.twinkleFrame < 0) {
-            if (Math.random() > 0.97) {
-              s.twinkleFrame = parseInt(Math.random() * 8, 10);
-            }
-          } else {
-            s.twinkleFrame--;
-            if (!opacitySupported) {
-              s.o.style.visibility = (s.twinkleFrame && s.twinkleFrame % 2 === 0 ? 'hidden' : 'visible');
-            } else {
-              s.o.style.opacity = (s.twinkleFrame && s.twinkleFrame % 2 === 0 ? 0 : 1);
-            }
-          }
-        }
-      }
-    };
+    
 
     this.animate = function() {
       // main animation loop
@@ -599,13 +555,7 @@ var snowStorm = (function(window, document) {
     storm.timerInit();
   };
 
-  this.start = function(bFromOnLoad) {
-    if (!didInit) {
-      didInit = true;
-    } else if (bFromOnLoad) {
-      // already loaded and running
-      return true;
-    }
+  
     if (typeof storm.targetElement === 'string') {
       var targetID = storm.targetElement;
       storm.targetElement = document.getElementById(targetID);

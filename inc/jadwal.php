@@ -39,4 +39,3 @@ echo '<font face="Ubuntu">';
   echo sedx($site);
   
   exit;
-  print '</font>';
