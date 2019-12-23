@@ -62,6 +62,20 @@
   -moz-border-radius: 5px;
 	-webkit-border-radius: 20px;
 }
+
+#steal a{
+	 padding:5px 5px;
+	 margin:1;
+	 background:violet;
+	 text-decoration:none;
+	 letter-spacing:1px;
+	 -moz-border-radius: 10px; -webkit-border-radius: 5px; -khtml-border-radius: 5px; border-radius: 5px;
+ }
+ #steal a:hover{
+	 background:gray;
+	 border-bottom:5px solid red;
+	 border-top:5px solid red;
+ }
 </style>
 
 <?php
@@ -85,7 +99,8 @@ if(isset($_GET['id'])){
  
 curl_close($curl);
 
-print '<div class="memek"><br>';
+print '<center><div id="steal"><a href="/"><b>/home<b/></a>
+</div></center><div class="memek"><br>';
 //anime info    
 function wordFilter3($text)
 {
@@ -110,7 +125,7 @@ if ( preg_match($regex, $page, $listx) )
 
 
 //link    
-$regex = '/<div class="smokeddl">(.*?)<div class="anito-shortlink" id=(.*?)">/s';
+$regex = '/<div class="smokeddl">(.*?)<div class="anito-manual-placement-2" id=(.*?)">/s';
 if ( preg_match($regex, $page, $lost) )
 	
     echo '<center><div class="rounded">',$lost[0],'</div></div><br>'; 
@@ -120,8 +135,26 @@ else
 }
 
 
+preg_match_all("'<h3 class=\"lined-heading\">(.*?)</h3>'si", $page, $match);
+
+foreach($match[1] as $judul)
+{
+  function sed($text)
+  {
+      $sed = $text;
+      $sed = str_replace('Sinopsis', '', $sed);
+      $sed = str_replace('Subtitle Indonesia', '', $sed);
+      return $sed;
+  }
+  $titl = sed($judul);
+
+
+}
+
 
 ?>
+<title><?php echo $titl,' - Download'; ?></title>
+
 </div></div></div>
 <p><center>
  <div class="intro">
@@ -130,6 +163,6 @@ else
 <b>&copy; Sin,</b>
 
 <br><font size="2" color="gray">
-feel free to pull,issues,or stealing at:<br><font color=blue> https://github.com/sinkaroid/antifansub</font>
+feel free to pull,issues,or stealing at:<br><font color=blue> https://github.com/sinkaroid/anti</font>
 </font>
 </div>   

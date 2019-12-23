@@ -121,6 +121,6 @@ echo '<br><center>Founded <b>',$count,' </b>AnimeDB</center>';
 <b>&copy; Sin,</b>
 
 <br><font size="3" color="gray">
-feel free to pull,issues,or stealing at:<br><font color=blue> https://github.com/sinkaroid/anikyojin</font>
+feel free to pull,issues,or stealing at:<br><font color=blue> https://github.com/sinkaroid/anti</font>
 </font>
 </div>   

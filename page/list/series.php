@@ -114,6 +114,6 @@ else
 <b>&copy; Sin,</b>
 
 <br><font size="3" color="gray">
-feel free to pull,issues,or stealing at:<br><font color=blue> https://github.com/sinkaroid/antifansub</font>
+feel free to pull,issues,or stealing at:<br><font color=blue> https://github.com/sinkaroid/anti</font>
 </font>
 </div>   

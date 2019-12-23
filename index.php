@@ -111,6 +111,6 @@ else
 (<a href="inc/info.php" rel="nofollow" target="_blank" class="class2">server status</a>) | <font size="2" color="green">
 scraped in <?php echo(number_format(microtime(true) - $start_time, 2)); ?> sec.</font>
 <br><font size="2" color="gray">
-feel free to pull,issues,or stealing at:<br><font color=blue> https://github.com/sinkaroid/antifansub</font>
+feel free to pull,issues,or stealing at:<br><font color=blue> https://github.com/sinkaroid/anti</font>
 </font>
 </div>   
