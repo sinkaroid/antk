@@ -96,12 +96,13 @@ if(isset($_GET['id'])){
 	echo 'Scraper error: ' . curl_error($curl);
 	exit;
 }
- 
+
 curl_close($curl);
 
 print '<center><div id="steal"><a href="/"><b>/home<b/></a>
 </div></center><div class="memek"><br>';
-//anime info    
+
+//get series
 function wordFilter3($text)
 {
     $ambilkata = $text;
@@ -109,6 +110,7 @@ function wordFilter3($text)
     $ambilkata = str_replace('</span></p>', '', $ambilkata);
     $ambilkata = str_replace('Producers', '</p>Producers', $ambilkata);
     $ambilkata = str_replace('Genre', '<p hidden>', $ambilkata);
+   
     return $ambilkata;
 }
 
@@ -117,18 +119,26 @@ if ( preg_match($regex, $page, $list) )
 
     echo '<div class="kotak"><center>',wordFilter3($list[0]),'</div>'; 
 
-//sinopsis
+//get synopsis
 $regex = '/<div class="cover">(.*?)<\/div>/s';
 if ( preg_match($regex, $page, $listx) )
 
     echo '<center>',$listx[0],'</div>'; 
 
+//shortlink bypasser    
+function sedx($text)
+{
+    $sedx = $text;
+    $sedx = str_replace('<script src="https://gudbie.me/wp-content/plugins/soralink/assets/js/soralink.js">', '<!-- receh teros', $sedx);
+    $sedx = str_replace('soralink.run();</script>', '-->', $sedx);
+    return $sedx;
+}
 
-//link    
+//get url    
 $regex = '/<div class="smokeddl">(.*?)<div class="anito-manual-placement-2" id=(.*?)">/s';
 if ( preg_match($regex, $page, $lost) )
 	
-    echo '<center><div class="rounded">',$lost[0],'</div></div><br>'; 
+    echo '<center><div class="rounded">',sedx($lost[0]),'</div></div><br>'; 
 else 
     print "Not found";
 
@@ -147,7 +157,6 @@ foreach($match[1] as $judul)
       return $sed;
   }
   $titl = sed($judul);
-
 
 }
 
