@@ -58,7 +58,7 @@ require_once(realpath(dirname(__FILE__) . '/../inc/str.php'));
 if(isset($_GET['x'])){
 
 $babi = $_GET['x'];
-$bangsat = 'https://anitoki.com/?paged=';
+$bangsat = 'https://anitoki.web.id/?paged=';
 $kontol = $bangsat . $babi; // site.com/search?q="query" lo jadi ini dipecah jadi 2
 $curl = curl_init($kontol); 
 

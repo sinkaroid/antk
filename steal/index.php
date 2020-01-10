@@ -50,7 +50,7 @@
 	-webkit-border-radius: 20px; }   
    
   body { 
-  background: black url("inc/a.png") no-repeat fixed center; 
+  background: black url("/inc/a.png") no-repeat fixed center; 
 }
 
 .intro {
@@ -76,6 +76,10 @@
 	 border-bottom:5px solid red;
 	 border-top:5px solid red;
  }
+ img {
+  -moz-border-radius: 5px;
+	 -webkit-border-radius: 20px; }    
+ }
 </style>
 
 <?php
@@ -86,7 +90,7 @@ print $form;
 if(isset($_GET['id'])){
   $anti = $_GET['id'];
   $babi = "?p=";
-  $bangsat = 'https://anitoki.com/';
+  $bangsat = 'https://anitoki.web.id/';
   $kontol = $bangsat . $babi . $anti; 
   $curl = curl_init($kontol); 
   curl_setopt($curl, CURLOPT_RETURNTRANSFER, TRUE); 
@@ -110,6 +114,7 @@ function wordFilter3($text)
     $ambilkata = str_replace('</span></p>', '', $ambilkata);
     $ambilkata = str_replace('Producers', '</p>Producers', $ambilkata);
     $ambilkata = str_replace('Genre', '<p hidden>', $ambilkata);
+    
    
     return $ambilkata;
 }
@@ -120,10 +125,17 @@ if ( preg_match($regex, $page, $list) )
     echo '<div class="kotak"><center>',wordFilter3($list[0]),'</div>'; 
 
 //get synopsis
-$regex = '/<div class="cover">(.*?)<\/div>/s';
+function sedsys($text)
+{
+    $ambilkata = $text;
+    $ambilkata = str_replace('<span style="color: #ff0000;">', '<span hidden>', $ambilkata);
+    return $ambilkata;
+}
+
+$regex = "/<div class='lexot'>(.*?)<\/div>/s";
 if ( preg_match($regex, $page, $listx) )
 
-    echo '<center>',$listx[0],'</div>'; 
+    echo '<center>',sedsys($listx[0]),'</div>'; 
 
 //shortlink bypasser    
 function sedx($text)
@@ -131,21 +143,22 @@ function sedx($text)
     $sedx = $text;
     $sedx = str_replace('<script src="https://gudbie.me/wp-content/plugins/soralink/assets/js/soralink.js">', '<!-- receh teros', $sedx);
     $sedx = str_replace('soralink.run();</script>', '-->', $sedx);
+    
     return $sedx;
 }
 
 //get url    
-$regex = '/<div class="smokeddl">(.*?)<div class="anito-manual-placement-2" id=(.*?)">/s';
+$regex = '/<div class="smokeddl">(.*?)<div class="anito-shortlink" id=(.*?)">/s';
 if ( preg_match($regex, $page, $lost) )
 	
-    echo '<center><div class="rounded">',sedx($lost[0]),'</div></div><br>'; 
+    echo '<center><br><div class="rounded">',sedx($lost[0]),'</div></div><br>'; 
 else 
     print "Not found";
 
 }
 
 
-preg_match_all("'<h3 class=\"lined-heading\">(.*?)</h3>'si", $page, $match);
+preg_match_all("'<h1 class=\"jdlx\">(.*?)</h1>'si", $page, $match);
 
 foreach($match[1] as $judul)
 {

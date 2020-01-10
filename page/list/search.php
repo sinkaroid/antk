@@ -22,7 +22,7 @@ function wordFilter($text)
     //openurl
     $ambilkata = str_replace('" title=', '" rel="nofollow" target="_blank" title=', $ambilkata);
     $ambilkata = str_replace('<a href="', '<a href="/steal/?id=', $ambilkata);
-    $ambilkata = str_replace('https://anitoki.com/?p=', '', $ambilkata);
+    $ambilkata = str_replace('https://anitoki.web.id/?p=', '', $ambilkata);
     
     return $ambilkata;
 }

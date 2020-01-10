@@ -80,11 +80,11 @@ function wordFilter($text)
        $ambilkata = str_replace('href="', 'href="/page/list/series.php?id=', $ambilkata);
        $ambilkata = str_replace('" rel="', '" rel=', $ambilkata);
        $ambilkata = str_replace('<a href="', '<a href="/steal/?id=', $ambilkata);
-    $ambilkata = str_replace('https://anitoki.com/?anime=', '', $ambilkata);
+    $ambilkata = str_replace('https://anitoki.web.id/?anime=', '', $ambilkata);
     
     return $ambilkata;
 }
-$curl = curl_init('https://anitoki.com/?page_id=602'); //victim
+$curl = curl_init('https://anitoki.web.id/?page_id=602'); //victim
 
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, TRUE); 
 $page = curl_exec($curl); 

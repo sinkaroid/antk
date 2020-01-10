@@ -79,7 +79,7 @@ query : <input type="show" class="bordergaya" style="width:10%;" placeholder="se
 <?php
 require 'inc/str.php'; #model
 
-$curl = curl_init('https://anitoki.com'); 
+$curl = curl_init('https://anitoki.web.id'); 
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, TRUE); 
 $page = curl_exec($curl); 
 if(curl_errno($curl)) 
