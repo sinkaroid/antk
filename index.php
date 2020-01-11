@@ -79,7 +79,7 @@ query : <input type="show" class="bordergaya" style="width:10%;" placeholder="se
 <?php
 require 'inc/str.php'; #model
 
-$curl = curl_init('https://anitoki.web.id'); 
+$curl = curl_init('https://anitoki.web.id/'); //?rest_route= , use that if can't fetch latest content
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, TRUE); 
 $page = curl_exec($curl); 
 if(curl_errno($curl)) 
@@ -89,7 +89,7 @@ if(curl_errno($curl))
 }
 curl_close($curl);
 
-$regex = '/<div class="rapi">(.*?)<div class="pagination">/s';
+$regex = '/<div\nclass=rapi>(.*?)<div\nclass=pagination>/s';
 if ( preg_match($regex, $page, $list) )
 	
     echo '<center><br><font face=Ubuntu color=gold>',wordFilter($list[0]); 

@@ -119,7 +119,7 @@ function wordFilter3($text)
     return $ambilkata;
 }
 
-$regex = '/<div class="info">(.*?)<\/div>/s';
+$regex = '/<div\nclass=info>(.*?)<\/div>/s';
 if ( preg_match($regex, $page, $list) )
 
     echo '<div class="kotak"><center>',wordFilter3($list[0]),'</div>'; 
@@ -132,7 +132,7 @@ function sedsys($text)
     return $ambilkata;
 }
 
-$regex = "/<div class='lexot'>(.*?)<\/div>/s";
+$regex = "/<div\nclass=lexot>(.*?)<\/div>/s";
 if ( preg_match($regex, $page, $listx) )
 
     echo '<center>',sedsys($listx[0]),'</div>'; 
@@ -148,7 +148,7 @@ function sedx($text)
 }
 
 //get url    
-$regex = '/<div class="smokeddl">(.*?)<div class="anito-shortlink" id=(.*?)">/s';
+$regex = '/<div\nclass=smokeddl>(.*?)<div\nclass=anito-shortlink id=(.*?)>/s';
 if ( preg_match($regex, $page, $lost) )
 	
     echo '<center><br><div class="rounded">',sedx($lost[0]),'</div></div><br>'; 

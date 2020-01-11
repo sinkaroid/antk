@@ -88,7 +88,7 @@ if(isset($_GET['q'])){
   curl_close($curl);
   
   
-  $tag = '/<div class="rapi">(.*?)<div class="pagination">/s';
+  $tag = '/<div\nclass=rapi>(.*?)<div\nclass=pagination>/s';
   if ( preg_match($tag, $target, $udah) )
   
     

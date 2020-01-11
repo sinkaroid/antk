@@ -6,11 +6,11 @@ function wordFilter($text)
     $ambilkata = $text;
 
     //open element
-	$ambilkata = str_replace('<i class="fa fa-tag">', '</font>]</div></div><hr color=gray width=20%><br><section><p hidden>', $ambilkata);
+	$ambilkata = str_replace('class="fa fa-tag">', '</font></div></div><hr color=gray width=20%><br><section><p hidden>', $ambilkata);
     $ambilkata = str_replace('</p>', '', $ambilkata);
     $ambilkata = str_replace('<p>', '', $ambilkata);
-    $ambilkata = str_replace('<div class="thumb">', '<div class="kotak">', $ambilkata);
-    $ambilkata = str_replace('width="150"', 'width="190"', $ambilkata);
+    $ambilkata = str_replace('class=thumb>', 'class="kotak">', $ambilkata);
+    $ambilkata = str_replace('width=', 'width="190"', $ambilkata);
     $ambilkata = str_replace('height=', 'height="190"', $ambilkata);
     $ambilkata = str_replace('h2', 'h4', $ambilkata);
     $ambilkata = str_replace('<ul>', '', $ambilkata);
@@ -22,7 +22,7 @@ function wordFilter($text)
     $ambilkata = str_replace('<i class="fa fa-user"></i>', '[<font face=consolas size=2>', $ambilkata);
     //openurl
     $ambilkata = str_replace('" title=', '" rel="nofollow" target="_blank" title=', $ambilkata);
-    $ambilkata = str_replace('<a href="', '<a href="/steal/?id=', $ambilkata);
+    $ambilkata = str_replace('href="https://anitoki.web.id/?p=', 'href="/steal/?id=', $ambilkata);
     $ambilkata = str_replace('https://anitoki.web.id/?p=', '', $ambilkata);
     
     return $ambilkata;

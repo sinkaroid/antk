@@ -90,12 +90,12 @@ curl_close($curl);
 function wordFilter3($text)
 {
     $ambilkata = $text;
-    $ambilkata = str_replace('<a href="', '<a href="/steal/?id=', $ambilkata);
+    $ambilkata = str_replace('href="', 'href="/steal/?id=', $ambilkata);
     $ambilkata = str_replace('https://anitoki.web.id/?p=', '', $ambilkata);
     return $ambilkata;
 }
 
-$regex = "/<div class='sinopc'>(.*?)<div class='disqusmen'>/s";
+$regex = "/<div\nclass=sinopc>(.*?)<div\nclass=disqusmen>/s";
 if ( preg_match($regex, $page, $list) )
 
     echo '<div class="kotak">',wordFilter3($list[0]),'</div>'; 
