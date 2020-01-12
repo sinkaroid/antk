@@ -1,5 +1,5 @@
 # Anti
-[![CodeFactor](https://www.codefactor.io/repository/github/sinkaroid/anti/badge)](https://www.codefactor.io/repository/github/sinkaroid/anti) ![](https://img.shields.io/badge/php-%3E%3D5.3.9-blue.svg)  
+[![CodeFactor](https://www.codefactor.io/repository/github/sinkaroid/anti/badge)](https://www.codefactor.io/repository/github/sinkaroid/anti) [![](https://img.shields.io/packagist/php-v/curl/curl)](https://packagist.org/packages/curl/curl) [![](https://img.shields.io/github/commit-activity/m/sinkaroid/anti)](https://github.com/sinkaroid/anti/tree/master)  
 
 ## parameter  
 - `?home` main  
@@ -13,18 +13,19 @@
 require_once(realpath(dirname(__FILE__) . '/../inc/str.php')); 
 ```  
 
-## Discord
-integrate to hookbot  
-![](https://1.bp.blogspot.com/-g8H_KN6i_E0/XWENevaokLI/AAAAAAAAJqE/6Ri4bWy5oHENFyNI27FE_aXVYf5T_8TsgCLcBGAs/s1600/Screenshot_105.png)  
-
 ```php
-function sed($t)
+// if necessary or u can use your own rss fetcher
+header('Content-Type: text/plain');
+$url = 'victims/?feed=rss2';
+
+function sed($text)
 {
-    $sed = $t;
-    $sed = str_replace('https://kato.kireisubs.com/?p=', 'yoursite/steal/?id=',    
-	$sed);
-	
+    $ambilkata = $text;
+    $ambilkata = str_replace('victims/?p=', 'yours/steal/?id=', $ambilkata);
     return $sed;
-} # if necessary or u can use your own rss fetcher
-```
+}
+echo sed(file_get_contents($url));
+```  
+## integrate to hook/bot  
+![](https://i.imgur.com/1Ti7qmh.png)  
 

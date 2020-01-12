@@ -6,7 +6,7 @@ function wordFilter($text)
 {
     $ambilkata = $text;
 
-    $ambilkata = str_replace('https://anitoki.com/?p=', 'https://kato.kireisubs.org/steal/?id=', $ambilkata);
+    $ambilkata = str_replace('https://anitoki.web.id/?p=', 'https://kato.kireisubs.org/steal/?id=', $ambilkata);
 
     return $ambilkata;
 }
