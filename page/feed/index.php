@@ -1,6 +1,6 @@
 <?php 
 header('Content-Type: text/plain');
-$url = 'https://anitoki.com/?feed=rss2';
+$url = 'https://anitoki.web.id/?feed=rss2';
 
 function wordFilter($text)
 {
