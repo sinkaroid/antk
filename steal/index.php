@@ -8,7 +8,7 @@
 .memek {
   margin: auto;
   background-color: #f7f3f3;
-  width: 50%;
+  width: 60%;
   
   padding: 10px;
   -moz-border-radius: 5px;
