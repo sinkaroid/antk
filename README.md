@@ -26,5 +26,5 @@ function sed($text)
 echo sed(file_get_contents($url));
 ```  
 ## integrate to hook/bot  
-![](https://i.imgur.com/1Ti7qmh.png)  
+![](https://i.imgur.com/6VV69Pu.png)  
 
