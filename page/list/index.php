@@ -96,7 +96,7 @@ if(curl_errno($curl)) // check for execution errors
  
 curl_close($curl);
 
-$judul = '/<div\nid=abtext>(.*?)<div\nclass=navigation>/s';
+$judul = '/<div id="abtext">(.*?)<div class="navigation">/s';
 if ( preg_match($judul, $page, $list) )
 	
 echo wordFilter($list[1]);

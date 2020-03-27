@@ -73,7 +73,7 @@ if(curl_errno($curl))
 curl_close($curl);
 
 
-$tag = '/<div\nclass=rapi>(.*?)<div\nclass=pagination>/s';
+$tag = '/<div class="rapi">(.*?)<div class="pagination">/s';
 if ( preg_match($tag, $target, $udah) )
 	
     echo wordFilter($udah[0]);

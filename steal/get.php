@@ -9,7 +9,7 @@ function wordFilter($text)
 	$ambilkata = str_replace('class="fa fa-tag">', '</font></div></div><hr color=gray width=20%><br><section><p hidden>', $ambilkata);
     $ambilkata = str_replace('</p>', '', $ambilkata);
     $ambilkata = str_replace('<p>', '', $ambilkata);
-    $ambilkata = str_replace('class=thumb>', 'class="kotak">', $ambilkata);
+    $ambilkata = str_replace('class="thumb">', 'class="kotak">', $ambilkata);
     $ambilkata = str_replace('width=', 'width="190"', $ambilkata);
     $ambilkata = str_replace('height=', 'height="190"', $ambilkata);
     $ambilkata = str_replace('h2', 'h4', $ambilkata);

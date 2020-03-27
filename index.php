@@ -89,7 +89,7 @@ if(curl_errno($curl))
 }
 curl_close($curl);
 
-$regex = '/<div\nclass=rapi>(.*?)<div\nclass=pagination>/s';
+$regex = '/<div class="rapi">(.*?)<div class="pagination">/s';
 if ( preg_match($regex, $page, $list) )
 	
     echo '<center><br><font face=Ubuntu color=gold>',wordFilter($list[0]); 

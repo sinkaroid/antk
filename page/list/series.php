@@ -95,7 +95,7 @@ function wordFilter3($text)
     return $ambilkata;
 }
 
-$regex = "/<div\nclass=sinopc>(.*?)<div\nclass=disqusmen>/s";
+$regex = "/<div class='sinopc'>(.*?)<div class='disqusmen'>/s";
 if ( preg_match($regex, $page, $list) )
 
     echo '<div class="kotak">',wordFilter3($list[0]),'</div>'; 

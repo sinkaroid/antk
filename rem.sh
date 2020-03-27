@@ -1,4 +1,4 @@
 #!/bin/bash
 git add .
-git commit -m "<(tags)\n(Attribute)=anito-shortlink id=(.*?)>"
+git commit -m "adjust <(tags)\n(Attr)> to <(tags)='Attr'> as str instead"
 git push -f origin master
