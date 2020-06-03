@@ -1,12 +1,12 @@
 <?php 
 header('Content-Type: text/plain');
-$url = 'https://anitoki.web.id/?feed=rss2';
+$url = 'https://anitoki.web.id/feed/';
 
 function wordFilter($text)
 {
     $ambilkata = $text;
 
-    $ambilkata = str_replace('https://anitoki.web.id/?p=', 'https://kato.kireisubs.org/steal/?id=', $ambilkata);
+    $ambilkata = str_replace('<link>https://anitoki.web.id/', '<link>https://kato.kireisubs.org/steal/?id=', $ambilkata);
 
     return $ambilkata;
 }

@@ -8,7 +8,7 @@
 
 
   body { 
-   background: black url("/inc/bg.png") no-repeat fixed center; 
+   background: black url("/inc/a.png") no-repeat fixed center; 
  }
  a {
    color: green;
@@ -80,11 +80,11 @@ function wordFilter($text)
        $ambilkata = str_replace('href="', 'href="/page/list/series.php?id=', $ambilkata);
        $ambilkata = str_replace('" rel="', '" rel=', $ambilkata);
        $ambilkata = str_replace('<a href="', '<a href="/steal/?id=', $ambilkata);
-    $ambilkata = str_replace('https://anitoki.web.id/?anime=', '', $ambilkata);
+    $ambilkata = str_replace('https://anitoki.web.id/anime/', '', $ambilkata);
     
     return $ambilkata;
 }
-$curl = curl_init('https://anitoki.web.id/?page_id=602'); //victim
+$curl = curl_init('https://anitoki.web.id/anime-list/'); //victim
 
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, TRUE); 
 $page = curl_exec($curl); 

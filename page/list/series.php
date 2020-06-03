@@ -91,7 +91,7 @@ function wordFilter3($text)
 {
     $ambilkata = $text;
     $ambilkata = str_replace('href="', 'href="/steal/?id=', $ambilkata);
-    $ambilkata = str_replace('https://anitoki.web.id/?p=', '', $ambilkata);
+    $ambilkata = str_replace('https://anitoki.web.id/', '', $ambilkata);
     return $ambilkata;
 }
 

@@ -89,9 +89,9 @@ print $form;
 
 if(isset($_GET['id'])){
   $anti = $_GET['id'];
-  $babi = "?p=";
+
   $bangsat = 'https://anitoki.web.id/';
-  $kontol = $bangsat . $babi . $anti; 
+  $kontol = $bangsat . $anti; 
   $curl = curl_init($kontol); 
   curl_setopt($curl, CURLOPT_RETURNTRANSFER, TRUE); 
   $page = curl_exec($curl); 
@@ -114,7 +114,8 @@ function wordFilter3($text)
     $ambilkata = str_replace('</span></p>', '', $ambilkata);
     $ambilkata = str_replace('Producers', '</p>Producers', $ambilkata);
     $ambilkata = str_replace('Genre', '<p hidden>', $ambilkata);
-    
+    $ambilkata = str_replace('<a href="https://anitoki.web.id/?genres', '<a hidden ', $ambilkata);
+    $ambilkata = str_replace('<a href="https://codecguide.com', '<a hidden ', $ambilkata);
    
     return $ambilkata;
 }
@@ -172,9 +173,43 @@ foreach($match[1] as $judul)
   $titl = sed($judul);
 
 }
+echo '<div id="spoiler" style="display:none">';
+function puki($text)
+{
+    $puki = $text;
+    $puki = str_replace('.google.com', '[ https://drive.google.com', $puki);
+    $puki = str_replace('sharing', 'sharing ] ', $puki);
+    return $puki;
+}
+echo '<div class="momok">';
+preg_match_all('<a href="https://drive(.*?)">', $page, $mok);
+foreach($mok[1] as $key=>$item)
+{
+  echo puki("$key => $item <br>");
+}
+echo '</div>';
 
+$image = '/data-lazy-src="(.*?)" width="10/';  
+  preg_match_all($image,$page,$data);
+  echo '<div class="tai">';
+  foreach($data[1] as $tai)
+  echo $tai;
+  echo '</div>';
+
+$gede = '/data-lazy-src="(.*?)" class="size-full/';  
+  preg_match_all($gede,$page,$poster);
+  echo '<div class="jamet">';
+  foreach($poster[1] as $jamet)
+  echo $jamet;
+  echo '</div>';
+
+echo '<div class="autis">';
+echo $titl,",-antiFansub bypasser";
+echo '</div>';
 
 ?>
+</div>
+<button title="Click to show/hide content" type="button" onclick="if(document.getElementById('spoiler') .style.display=='none') {document.getElementById('spoiler') .style.display=''}else{document.getElementById('spoiler') .style.display='none'}">array</button>
 <title><?php echo $titl,' - Download'; ?></title>
 
 </div></div></div>

@@ -16,14 +16,14 @@ function wordFilter($text)
     $ambilkata = str_replace('<ul>', '', $ambilkata);
     $ambilkata = str_replace('Posted', '', $ambilkata);
     $ambilkata = str_replace('Released', '', $ambilkata);
-    $ambilkata = str_replace('Admin', '<font color=pink><b>Kato</b></font><font color=skyblue>(BOT)</font>,', $ambilkata);
+    $ambilkata = str_replace('Admin', '<font color=pink><b>Sin.</b></font>,', $ambilkata);
     
 
     
     //openurl
     $ambilkata = str_replace('" title=', '" rel="nofollow" target="_blank" title=', $ambilkata);
-    $ambilkata = str_replace('href="https://anitoki.web.id/?p=', 'href="/steal/?id=', $ambilkata);
-    $ambilkata = str_replace('https://anitoki.web.id/?p=', '', $ambilkata);
+    $ambilkata = str_replace('href="https://anitoki.web.id/', 'href="/steal/?id=', $ambilkata);
+    
     
     return $ambilkata;
 }

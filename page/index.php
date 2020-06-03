@@ -38,8 +38,10 @@
 
 <font face=Ubuntu size="2" color="white">
 <center><div id="steal"><a href="/"><b>/home<b/></a>
-<a href="list" rel="nofollow" target="_blank"><b>animelist</b></a>
-<a href="/?chart" rel="nofollow" target="_blank"><b>fullschedule</b></a></div><br>
+<a href="./list" rel="nofollow" target="_blank"><b>animelist</b></a>
+<a href="/?chart" rel="nofollow" target="_blank"><b>fullschedule</b></a>
+<a href="/?about" rel="nofollow" target="_blank"><b>about</b></a></div><br>
+
 </font>
 <br>
 <form action="/page/list/anime.php" method="get">
@@ -58,8 +60,8 @@ require_once(realpath(dirname(__FILE__) . '/../inc/str.php'));
 if(isset($_GET['x'])){
 
 $babi = $_GET['x'];
-$bangsat = 'https://anitoki.web.id/?paged=';
-$kontol = $bangsat . $babi; // site.com/search?q="query" lo jadi ini dipecah jadi 2
+$bangsat = 'https://anitoki.web.id/page/';
+$kontol = $bangsat . $babi ."/"; // site.com/search?q="query" lo jadi ini dipecah jadi 2
 $curl = curl_init($kontol); 
 
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, TRUE); 

@@ -22,8 +22,8 @@ function wordFilter($text)
     $ambilkata = str_replace('<i class="fa fa-user"></i>', '[<font face=consolas size=2>', $ambilkata);
     //openurl
     $ambilkata = str_replace('" title=', '" rel="nofollow" target="_blank" title=', $ambilkata);
-    $ambilkata = str_replace('href="https://anitoki.web.id/?p=', 'href="/steal/?id=', $ambilkata);
-    $ambilkata = str_replace('https://anitoki.web.id/?p=', '', $ambilkata);
+    $ambilkata = str_replace('href="https://anitoki.web.id/', 'href="/steal/?id=/', $ambilkata);
+    $ambilkata = str_replace('https://anitoki.web.id/', '', $ambilkata);
     
     return $ambilkata;
 }

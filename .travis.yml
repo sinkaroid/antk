@@ -1,0 +1,7 @@
+language: php
+php:
+  - 7.1.9
+jobs:
+  include:
+    - stage: test
+      script: curl https://anitoki.web.id/
