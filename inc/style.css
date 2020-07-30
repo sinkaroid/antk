@@ -141,12 +141,7 @@ div.rounded {
 	text-align: center;
   }
 
-  .center {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	width: 50%;
-  }
+ 
  .toto pre {
    display: inline-block;
    text-align: left;
@@ -400,7 +395,7 @@ div.rounded {
 	}
 }
   
-.center { 
+.center {
 	position: absolute;
 	top: 0;
 	bottom: 0;
