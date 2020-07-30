@@ -13,20 +13,58 @@ div.rounded {
 	div.kotak {
 	 background-color: maroon;
 	 margin: auto;
-   width: 20%;
+   width: 90%;
 	 color: #000000;
 	 padding: 1px;
 	 
 	 -moz-border-radius: 5px;
-	 border-radius: 20px; }    
+	 border-radius: 20px; }
  
-	img {
-   border-radius: 50%;
-   border: 2px solid gold;
-   padding: 1px;
+	.img1 {
+		filter: drop-shadow(0 4px 5px rgba(0, 0, 0, 0.65));
+		animation: pulsePic 2s infinite;
+		-webkit-animation: pulsePic 2s infinite;
+		border-radius: 50%;
+		
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		
+		text-align: center;
+		user-select: none;
+		-moz-user-select: none;
+		-webkit-user-drag: none;
+		-webkit-user-select: none;
+		-ms-user-select: none
   
  }
- img:hover {
+ @-webkit-keyframes pulsePic {
+	0% {
+		-webkit-box-shadow: 0 0 0 0 rgba(246, 246, 246, .4)
+	}
+	70% {
+		-webkit-box-shadow: 0 0 0 20px transparent
+	}
+	100% {
+		-webkit-box-shadow: 0 0 0 0 transparent
+	}
+}
+
+@keyframes pulsePic {
+	0% {
+		-moz-box-shadow: 0 0 0 0 rgba(246, 246, 246, .4);
+		box-shadow: 0 0 0 0 rgba(246, 246, 246, .4)
+	}
+	70% {
+		-moz-box-shadow: 0 0 0 20px transparent;
+		box-shadow: 0 0 0 20px transparent
+	}
+	100% {
+		-moz-box-shadow: 0 0 0 0 transparent;
+		box-shadow: 0 0 0 0 transparent
+	}
+}
+ .img1:hover {
    
 	 transform: rotate(1000deg) scale(1.0);
 	 -webkit-transition: .8s ease-in-out;
@@ -35,7 +73,7 @@ div.rounded {
  
  
  #steal a{
-	 padding:5px 5px;
+	 padding:5px;
 	 margin:1;
 	 background:crimson;
 	 text-decoration:none;
@@ -47,6 +85,34 @@ div.rounded {
 	 border-bottom:5px solid red;
 	 border-top:5px solid red;
  }
+
+ #sis a{
+	padding:5px;
+	margin:1;
+	background:black;
+	text-decoration:none;
+	letter-spacing:1px;
+	-moz-border-radius: 10px; -webkit-border-radius: 5px; -khtml-border-radius: 5px; border-radius: 5px;
+}
+#sis a:hover{
+	background:gray;
+	border-bottom:5px solid red;
+	border-top:5px solid red;
+}
+
+#sos a{
+	padding:5px;
+	margin:1;
+	background:darkred;
+	text-decoration:none;
+	letter-spacing:1px;
+	-moz-border-radius: 10px; -webkit-border-radius: 5px; -khtml-border-radius: 5px; border-radius: 5px;
+}
+#sos a:hover{
+	background:gray;
+	border-bottom:5px solid red;
+	border-top:5px solid red;
+}
  
  section {
    float: left;
@@ -74,6 +140,13 @@ div.rounded {
  .toto {
 	text-align: center;
   }
+
+  .center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+  }
  .toto pre {
    display: inline-block;
    text-align: left;
@@ -86,7 +159,7 @@ div.rounded {
  .koceng pre {
    display: inline-block;
    text-align: left;
-  } 
+  }
   .intro {
    margin: auto;
    background-color: #f7f3f3;
@@ -109,6 +182,17 @@ div.rounded {
 	  border-radius: 30px;
   }
   
+  .fetish {
+	margin: auto;
+	background:rgba(78, 57, 57, 0.719);
+	width: 60%;
+	
+	padding: 10px;
+	-moz-border-radius: 5px;
+	  border-radius: 30px;
+  }
+  
+
   .bokong {
 	margin: auto;
 	text-align: center;
@@ -153,3 +237,174 @@ div.rounded {
 	-moz-border-radius: 5px;
 	  border-radius: 30px;
   }
+
+  .anjing {
+	margin: auto;
+	background:rgba(194, 40, 40, 0.664);
+	width: 35%;
+	padding: 10px;
+	-moz-border-radius: 5px;
+	  border-radius: 20px;
+
+	  filter: drop-shadow(0 6px 8px rgba(165, 161, 161, 0.65));
+		animation: pulsePic 2s infinite;
+		-webkit-animation: pulsePic 2s infinite;
+	
+		
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		
+		text-align: center;
+		user-select: none;
+		-moz-user-select: none;
+		-webkit-user-drag: none;
+		-webkit-user-select: none;
+		-ms-user-select: none
+	
+  }
+
+
+  
+  .moka {
+	padding:15;
+  margin:0;
+  width: 1000px;
+	
+	background:rgba(255, 255, 255, 0.767);
+
+	
+	-moz-border-radius: 5px;
+	  border-radius: 20px;
+	
+  }
+  
+  
+
+  .box {
+	width: 40%;
+	margin: 0 auto;
+	background: rgba(255,255,255,0.2);
+	padding: 35px;
+	border: 2px solid #fff;
+	border-radius: 20px/50px;
+	background-clip: padding-box;
+	text-align: center;
+  }
+  
+  .button {
+	font-size: 1em;
+	padding: 10px;
+	color: #fff;
+	border: 2px solid #06D85F;
+	border-radius: 20px/50px;
+	text-decoration: none;
+	cursor: pointer;
+	transition: all 0.3s ease-out;
+  }
+  .button:hover {
+	background: #06D85F;
+  }
+  
+  .overlay {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.7);
+	transition: opacity 500ms;
+	visibility: hidden;
+	opacity: 0;
+  }
+  .overlay:target {
+	visibility: visible;
+	opacity: 1;
+  }
+  
+  .popup {
+	margin: 70px auto;
+	padding: 20px;
+	background: #fff;
+	border-radius: 5px;
+	width: 30%;
+	position: relative;
+	transition: all 5s ease-in-out;
+  }
+  
+ 
+  .popup .close {
+	position: absolute;
+	top: 20px;
+	right: 30px;
+	transition: all 200ms;
+	font-size: 30px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #333;
+  }
+  .popup .close:hover {
+	color: #06D85F;
+  }
+  .popup .content {
+	max-height: 30%;
+	overflow: auto;
+  }
+  
+  @media screen and (max-width: 700px){
+	.box{
+	  width: 70%;
+	}
+	.popup{
+	  width: 70%;
+	}
+  }
+
+  * {
+	box-sizing: border-box;
+  }
+  
+  /* Create three equal columns that floats next to each other */
+  .column {
+	float: left;
+	
+	width: 33.33%;
+	padding: 10px;
+	height: 300px; /* Should be removed. Only for demonstration */
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+	content: "";
+	display: table;
+	clear: both;
+  }
+
+  .card-horizontal {
+  display: flex;
+  flex: 1 1 auto;
+}
+
+#loader { 
+	border: 12px solid #f3f3f3; 
+	border-radius: 50%; 
+	border-top: 12px solid #444444; 
+	width: 70px; 
+	height: 70px; 
+	animation: spin 1s linear infinite; 
+} 
+  
+@keyframes spin { 
+	100% { 
+		transform: rotate(360deg); 
+	} 
+} 
+  
+.center { 
+	position: absolute; 
+	top: 0; 
+	bottom: 0; 
+	left: 0; 
+	right: 0; 
+	margin: auto; 
+} 

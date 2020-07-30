@@ -1,0 +1,5 @@
+requests
+colorama
+feedparser
+webbrowser
+bs4

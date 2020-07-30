@@ -12,7 +12,7 @@ echo '<font face="Ubuntu">';
       $sed = str_replace('<footer>', '<p hidden>', $sed);
       $sed = str_replace('<div class="footer-links">', '<p hidden>', $sed);
       $sed = str_replace('site design', '<p hidden>', $sed);
-      $sed = str_replace('href="/', 'dog', $sed);
+      $sed = str_replace('href="/', '', $sed);
       
       return $sed;
   }

@@ -1,3 +1,4 @@
+
 <?php
 echo '<font face=Ubuntu>';
 //ambil str
@@ -14,6 +15,7 @@ function wordFilter($text)
     $ambilkata = str_replace('height=', 'height="190"', $ambilkata);
     $ambilkata = str_replace('h2', 'h4', $ambilkata);
     $ambilkata = str_replace('<ul>', '', $ambilkata);
+    $ambilkata = str_replace('Check More Anime','', $ambilkata);
     $ambilkata = str_replace('Posted', '', $ambilkata);
     $ambilkata = str_replace('Released', '', $ambilkata);
     $ambilkata = str_replace('Admin', '<font color=green><b>KANNA</b></font><font color=skyblue>(BOT)</font>,', $ambilkata);

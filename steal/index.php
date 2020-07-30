@@ -1,13 +1,9 @@
 
 <link href="http://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" type="text/css">
-<meta property="og:title" content="Anti | Download" />
-<meta property="og:type" content="AntifansubID" />
-<meta property="og:image" content="https://kireisubs.org/wp-content/uploads/2019/05/bcl.jpg" />
-<meta property="og:description" content="bring in end the fansub" />
 <style>
 .memek {
   margin: auto;
-  background-color: #f7f3f3;
+  background:rgba(255, 255, 255, 0.801);
   width: 60%;
   
   padding: 10px;
@@ -15,6 +11,15 @@
 	-webkit-border-radius: 30px;
 }
 
+.nenen {
+  margin: auto;
+  background-color: #e2e8d9;
+  width: 90%;
+  
+  padding: 10px;
+  -moz-border-radius: 5px;
+	-webkit-border-radius: 30px;
+}
 .bokong {
   margin: auto;
   text-align: center;
@@ -49,8 +54,11 @@
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 20px; }   
    
-  body { 
-  background: black url("/inc/a.png") no-repeat fixed center; 
+  body {
+  background: url(/inc/back.png) no-repeat center center fixed;
+  background-size: cover;
+  height: 100%;
+  
 }
 
 .intro {
@@ -78,11 +86,13 @@
  }
  img {
   -moz-border-radius: 5px;
-	 -webkit-border-radius: 20px; }    
+	 -webkit-border-radius: 30px; }    
  }
+ 
 </style>
 
 <?php
+$start_time = microtime(true);
 require 'get.php';
 
 print $form;
@@ -104,7 +114,7 @@ if(isset($_GET['id'])){
 curl_close($curl);
 
 print '<center><div id="steal"><a href="/"><b>/home<b/></a>
-</div></center><div class="memek"><br>';
+</div></center><div class="memek" style="width: 850px"><br>';
 
 //get series
 function wordFilter3($text)
@@ -114,6 +124,7 @@ function wordFilter3($text)
     $ambilkata = str_replace('</span></p>', '', $ambilkata);
     $ambilkata = str_replace('Producers', '</p>Producers', $ambilkata);
     $ambilkata = str_replace('Genre', '<p hidden>', $ambilkata);
+    
     $ambilkata = str_replace('<a href="https://anitoki.web.id/?genres', '<a hidden ', $ambilkata);
     $ambilkata = str_replace('<a href="https://codecguide.com', '<a hidden ', $ambilkata);
    
@@ -123,20 +134,21 @@ function wordFilter3($text)
 $regex = '/<div class="info">(.*?)<\/div>/s';
 if ( preg_match($regex, $page, $list) )
 
-    echo '<div class="kotak"><center>',wordFilter3($list[0]),'</div>'; 
+    echo '<div class="kotak" style="width: 300px"><center>',wordFilter3($list[0]),'</div>'; 
 
 //get synopsis
 function sedsys($text)
 {
     $ambilkata = $text;
     $ambilkata = str_replace('<span style="color: #ff0000;">', '<span hidden>', $ambilkata);
+    $ambilkata = str_replace('700px', '500px', $ambilkata);
     return $ambilkata;
 }
 
 $regex = "/<div class='lexot'>(.*?)<\/div>/s";
 if ( preg_match($regex, $page, $listx) )
 
-    echo '<center>',sedsys($listx[0]),'</div>'; 
+    echo '<br><div class="nenen"><font color=crimson size=3><center>',sedsys($listx[0]),'</font></div></div>'; 
 
 //shortlink bypasser    
 function sedx($text)
@@ -214,12 +226,29 @@ echo '</div>';
 
 </div></div></div>
 <p><center>
- <div class="intro">
-<font color=crimson face=consolas size=2>
+<div class="intro" style="width: 400px">
+<font color=crimson face=consolas size=3>
 
 <b>&copy; Sin,</b>
-
+(<a href="https://dolls.redsplit.org/783823617" rel="nofollow" target="_blank" class="class2">server status</a>) | <font size="2" color="green">
+scraped in <?php echo(number_format(microtime(true) - $start_time, 2)); ?> sec.</font>
 <br><font size="2" color="gray">
-feel free to pull,issues,or stealing at:<br><font color=blue> https://github.com/sinkaroid/anti</font>
+feel free to pull,issues,or stealing at:<br><font color=blue> https://github.com/sinkaroid/Anti</font>
 </font>
-</div>   
+</div>     
+
+<meta data-n-head="ssr" charset="utf-8"><meta data-n-head="ssr" name="viewport" content="width=device-width, initial-scale=1">
+<meta data-n-head="ssr" data-hid="keywords" name="keywords" content="anti-id | fuck every0ne">
+<meta data-n-head="ssr" data-hid="theme-color" name="theme-color" content="#606B8E">
+<meta data-n-head="ssr" data-hid="og:title" property="og:title" content="<?php echo $titl,"- Download";?>">
+<meta data-n-head="ssr" data-hid="og:site_name" property="og:site_name" content="AntifansubID">
+<meta data-n-head="ssr" data-hid="og:type" property="og:type" content="website">
+<meta data-n-head="ssr" data-hid="og:url" property="og:url" content="htts://kato.kireisubs.org">
+<meta data-n-head="ssr" data-hid="og:image" property="og:image" content="https://i.imgur.com/7dqql2a.png">
+<meta data-n-head="ssr" data-hid="og:image:alt" property="og:image:alt" content="kato">
+<meta data-n-head="ssr" data-hid="og:description" property="og:description" content="both fansub/fanshare are sites that share illegal content. Anyone who wants to build or run a web like this must understand that point.">
+<meta data-n-head="ssr" data-hid="twitter:card" property="twitter:card" content="summary">
+<meta data-n-head="ssr" data-hid="twitter:site" property="twitter:site" content="@kato">
+<meta data-n-head="ssr" data-hid="twitter:title" property="twitter:title" content="kato"">
+<meta data-n-head="ssr" data-hid="twitter:image" property="twitter:image" content="https://i.imgur.com/7dqql2a.png">
+<link data-n-head="ssr" rel="icon" type="image/png" href="/favicon.png">

@@ -7,9 +7,12 @@
   }
 
 
-  body { 
-   background: black url("/inc/a.png") no-repeat fixed center; 
- }
+  body {
+  background: url(/inc/back.png) no-repeat center center fixed;
+  background-size: cover;
+  height: 100%;
+  
+}
  a {
    color: green;
  }
@@ -64,7 +67,7 @@
 
 <?php
 echo '<font face=Ubuntu color=green>
-<center>[animelist]</center><p>
+<center>[animelist] - <a href="/">/home</a></center><p>
 <div class="infox">';
 //ambil str
 function wordFilter($text)
@@ -80,11 +83,11 @@ function wordFilter($text)
        $ambilkata = str_replace('href="', 'href="/page/list/series.php?id=', $ambilkata);
        $ambilkata = str_replace('" rel="', '" rel=', $ambilkata);
        $ambilkata = str_replace('<a href="', '<a href="/steal/?id=', $ambilkata);
-    $ambilkata = str_replace('https://anitoki.web.id/anime/', '', $ambilkata);
+    $ambilkata = str_replace('https://anitoki.web.id/archives/anime/', '', $ambilkata);
     
     return $ambilkata;
 }
-$curl = curl_init('https://anitoki.web.id/anime-list/'); //victim
+$curl = curl_init('https://anitoki.web.id/anime-list'); //victim
 
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, TRUE); 
 $page = curl_exec($curl); 

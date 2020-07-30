@@ -1,5 +1,7 @@
+<title>AntifansubID</title>
+
 <link href="http://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="/inc/rain.js"></script> 
+<script type="text/javascript" src="inc/rain.js"></script> 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
 <script src='https://kit.fontawesome.com/a076d05399.js'></script>
@@ -7,20 +9,44 @@
 // curl jadwal
 $start_time = microtime(true);
 if(isset($_GET['chart'])){
-require '/inc/jadwal.php';  #model
+require 'inc/jadwal.php';  #model
 }
 
 ?>
 
-<link rel="stylesheet" type="text/css" href="/inc/style.css">
+<link rel="stylesheet" type="text/css" href="inc/style.css">
 <style>
    
     body {
-  background: url(/inc/back.png) no-repeat center center fixed;
+  background: url(inc/back.png) no-repeat center center fixed;
   background-size: cover;
   height: 100%;
   
 }
+
+#loader { 
+            border: 12px solid #f3f3f3; 
+            border-radius: 50%; 
+            border-top: 12px solid #444444; 
+            width: 70px; 
+            height: 70px; 
+            animation: spin 1s linear infinite; 
+        } 
+          
+        @keyframes spin { 
+            100% { 
+                transform: rotate(360deg); 
+            } 
+        } 
+          
+        .center { 
+            position: absolute; 
+            top: 0; 
+            bottom: 0; 
+            left: 0; 
+            right: 0; 
+            margin: auto; 
+        } 
  
 </style>
 <center>
@@ -36,10 +62,9 @@ require '/inc/jadwal.php';  #model
 </pre></div></font>
 
 
-
 </p>
 
-<div class="anjing">
+<div class="anjing" style="width: 650px">
 <font face=Ubuntu color=white size=2><div id="sis">
 <i class="fa fa-user-circle" style="font-size:25px;color:white"></i>
 <a href="/"><b>/kato<b/></a>
@@ -85,10 +110,10 @@ print '</font>';
 
 <font face=Ubuntu size="2" color="white">
 <center><br><div id="steal"><a href="/"><b><i class="fa fa-rocket" style="font-size:25px;color:white"></i>/home<b/></a>
-<a href="/page/list" rel="nofollow" target="_blank"><b><i class="fa fa-desktop" style="font-size:20px;color:white"></i>animelist</b></a>
-<a href="/?chart" rel="nofollow" target="_blank"><b><i class="fa fa-globe" style="font-size:20px;color:white"></i>fullschedule</b></a>
-<a href="/#popup1"><b><i class="fab fa-discord" style="font-size:20px;color:white"></i>Discordbots</b></a>
-<a href="/?about" rel="nofollow" target="_blank"><b><i class="fa fa-bug" style="font-size:20px;color:white"></i>about</b></a>
+<a href="page/list" rel="nofollow" target="_blank"><b><i class="fa fa-desktop" style="font-size:20px;color:white"></i>animelist</b></a>
+<a href="?chart" rel="nofollow" target="_blank"><b><i class="fa fa-globe" style="font-size:20px;color:white"></i>fullschedule</b></a>
+<a href="#popup1"><b><i class="fab fa-discord" style="font-size:20px;color:white"></i>Discordbots</b></a>
+<a href="?about" rel="nofollow" target="_blank"><b><i class="fa fa-bug" style="font-size:20px;color:white"></i>about</b></a>
 </div><br>
 
 <form action="page/list/anime.php" method="get">
@@ -98,44 +123,12 @@ print '</font>';
 </div>
 <div id="sos">
 <br><font size=2><i class="fa fa-sun-o" style="font-size:25px;color:white"></i>
-<a href="/?chart" rel="nofollow" target="_blank">📅current season:
-<?php require_once(realpath(dirname(__FILE__) . '/../inc/api.php')); ?>
+<a href="?chart" rel="nofollow" target="_blank">📅current season:
+<?php include("inc/api.php"); ?>
 </a></font></div><br>
 <hr width=10%>
 <div class="fetish">
+
 <div class="row">
 <body> 
     <div id="loader" class="center"></div> 
-<?php
-echo'<font color=gold>';
-require_once(realpath(dirname(__FILE__) . '/../inc/str.php'));
-
-if(isset($_GET['x'])){
-
-$babi = $_GET['x'];
-$bangsat = 'https://anitoki.web.id/page/';
-$kontol = $bangsat . $babi; // site.com/search?q="query" lo jadi ini dipecah jadi 2
-$curl = curl_init($kontol); 
-
-curl_setopt($curl, CURLOPT_RETURNTRANSFER, TRUE); 
-$target = curl_exec($curl); 
-if(curl_errno($curl))
-{
-	echo 'error: ' . curl_error($curl);
-	exit;
-}
- 
-curl_close($curl);
-
-
-$tag = '/<div class="rapi">(.*?)<div class="pagination">/s';
-if ( preg_match($tag, $target, $udah) )
-	
-    echo wordFilter($udah[0]);
-else 
-    print "error";
-}
-
-require_once(realpath(dirname(__FILE__) . '/../rest/const1.php'));
-?>
-<title><?php echo 'page: ', $babi,' - AntiID'; ?></title>

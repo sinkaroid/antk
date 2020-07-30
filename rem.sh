@@ -1,4 +1,4 @@
 #!/bin/bash
 git add .
-git commit -m "consider parameter instead ?postid, adjust pattern tho"
+git commit -m "smol buff with /rest_route"
 git push -f origin master
