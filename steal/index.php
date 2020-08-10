@@ -241,7 +241,7 @@ feel free to pull,issues,or stealing at:<br><font color=blue> https://github.com
 <meta data-n-head="ssr" data-hid="keywords" name="keywords" content="anti-id | fuck every0ne">
 <meta data-n-head="ssr" data-hid="theme-color" name="theme-color" content="#606B8E">
 <meta data-n-head="ssr" data-hid="og:title" property="og:title" content="<?php echo $titl,"- Download";?>">
-<meta data-n-head="ssr" data-hid="og:site_name" property="og:site_name" content="AntifansubID">
+<meta data-n-head="ssr" data-hid="og:site_name" property="og:site_name" content="Redkato">
 <meta data-n-head="ssr" data-hid="og:type" property="og:type" content="website">
 <meta data-n-head="ssr" data-hid="og:url" property="og:url" content="htts://kato.kireisubs.org">
 <meta data-n-head="ssr" data-hid="og:image" property="og:image" content="https://i.imgur.com/7dqql2a.png">
