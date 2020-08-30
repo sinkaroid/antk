@@ -91,7 +91,7 @@ print '</font>';
 <a href="/?about" rel="nofollow" target="_blank"><b><i class="fa fa-bug" style="font-size:20px;color:white"></i>about</b></a>
 </div><br>
 
-<form action="page/list/anime.php" method="get">
+<form action="/page/list/anime.php" method="get">
 <i class="fa fa-terminal" style="font-size:20px;color:white"></i> kato@megumi:~ <input type="show" class="bordergaya" style="width:20%;" placeholder="search.." name="q">
 </form>
 </font>
@@ -113,7 +113,7 @@ require_once(realpath(dirname(__FILE__) . '/../inc/str.php'));
 if(isset($_GET['x'])){
 
 $babi = $_GET['x'];
-$bangsat = 'https://anitoki.web.id/page/';
+$bangsat = 'https://anitoki.com/page/';
 $kontol = $bangsat . $babi; // site.com/search?q="query" lo jadi ini dipecah jadi 2
 $curl = curl_init($kontol); 
 

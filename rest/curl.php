@@ -1,5 +1,9 @@
 <?php
-$curl = curl_init('https://anitoki.web.id/'); //?rest_route= , use that if can't fetch latest content
+$com = 'https://anitoki.com/';
+$id = 'https://anitoki.web.id/';
+# jogo2 nek ganti meneh
+
+$curl = curl_init($com); //?rest_route= , use that if can't fetch latest content
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, TRUE); 
 $page = curl_exec($curl); 
 if(curl_errno($curl)) 

@@ -100,7 +100,7 @@ print $form;
 if(isset($_GET['id'])){
   $anti = $_GET['id'];
 
-  $bangsat = 'https://anitoki.web.id/';
+  $bangsat = 'https://anitoki.com/';
   $kontol = $bangsat . $anti; 
   $curl = curl_init($kontol); 
   curl_setopt($curl, CURLOPT_RETURNTRANSFER, TRUE); 

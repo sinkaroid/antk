@@ -5,12 +5,6 @@
 
 </div>
 
-----
-     $ pip install -r requirements.txt 
-     $ cd Red 
-     $ ./red.py
-
------
 ```php
 require_once(realpath(dirname(__FILE__) . '/../inc/str.php')); 
 ```  
@@ -23,4 +17,4 @@ require_once(realpath(dirname(__FILE__) . '/../inc/str.php'));
 - `?chart` == fullschedule  
 
 ## hooks:
-![](https://i.imgur.com/eoQ0zfN.png)
+![](https://i.imgur.com/OoaC1Zr.png)

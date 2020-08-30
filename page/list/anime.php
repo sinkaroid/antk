@@ -115,7 +115,7 @@ require 'search.php';
 if(isset($_GET['q'])){
 
   $babi = $_GET['q'];
-  $bangsat = 'https://anitoki.web.id/?s=';
+  $bangsat = 'https://anitoki.com/?s=';
   $kontol = $bangsat . $babi; // site.com/search?q="query" lo jadi ini dipecah jadi 2
   $curl = curl_init($kontol); 
   

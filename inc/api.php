@@ -17,7 +17,7 @@ function wf($text)
     $ambilkata = str_replace('title', '', $ambilkata);
     $ambilkata = str_replace('<>', '', $ambilkata);
     $ambilkata = str_replace('</>', '', $ambilkata);
-    $ambilkata = str_replace(' Anime Schedule - Today & Weekly Air Times', '', $ambilkata);
+    $ambilkata = str_replace('- Today & Weekly Air Times', '', $ambilkata);
     return $ambilkata;
 }
 $curl = curl_init('https://animeschedule.net/'); //victim

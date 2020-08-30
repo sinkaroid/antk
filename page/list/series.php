@@ -113,7 +113,7 @@ print $form;
 if(isset($_GET['id'])){
   $anti = $_GET['id'];
   $babi = "?anime=";
-  $bangsat = 'https://anitoki.web.id/';
+  $bangsat = 'https://anitoki.com/';
   $kontol = $bangsat . $babi . $anti; 
   $curl = curl_init($kontol); 
   curl_setopt($curl, CURLOPT_RETURNTRANSFER, TRUE); 
@@ -131,7 +131,7 @@ function wordFilter3($text)
 {
     $ambilkata = $text;
     $ambilkata = str_replace('href="', 'href="/steal/?id=', $ambilkata);
-    $ambilkata = str_replace('https://anitoki.web.id/', '', $ambilkata);
+    $ambilkata = str_replace('https://anitoki.com/', '', $ambilkata);
     $ambilkata = str_replace('<p style="text-align: justify;"><span style="color: #ff0000;">', '<p hidden>', $ambilkata);
     $ambilkata = str_replace('<p style="text-align: center;"><iframe', '<p hidden><iframe', $ambilkata);
     return $ambilkata;
