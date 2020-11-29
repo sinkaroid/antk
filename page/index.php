@@ -114,7 +114,7 @@ if(isset($_GET['x'])){
 
 $babi = $_GET['x'];
 $bangsat = 'https://anitoki.com/page/';
-$kontol = $bangsat . $babi; // site.com/search?q="query" lo jadi ini dipecah jadi 2
+$kontol = $bangsat . $babi .'/'; // site.com/search?q="query" lo jadi ini dipecah jadi 2
 $curl = curl_init($kontol); 
 
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, TRUE); 

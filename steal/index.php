@@ -136,7 +136,7 @@ if ( preg_match($regex, $page, $list) )
 
     echo '<div class="kotak" style="width: 300px"><center>',wordFilter3($list[0]),'</div>'; 
 
-//get synopsis
+//get gambar lexot / venutama
 function sedsys($text)
 {
     $ambilkata = $text;
@@ -145,7 +145,7 @@ function sedsys($text)
     return $ambilkata;
 }
 
-$regex = "/<div class='lexot'>(.*?)<\/div>/s";
+$regex = '/<div class="venutama">(.*?)<div class="smokeddl">/s';
 if ( preg_match($regex, $page, $listx) )
 
     echo '<br><div class="nenen"><font color=crimson size=3><center>',sedsys($listx[0]),'</font></div></div>'; 
@@ -185,7 +185,7 @@ foreach($match[1] as $judul)
   $titl = sed($judul);
 
 }
-echo '<div id="spoiler" style="display:none">';
+//echo '<div id="spoiler" style="display:none">';
 function puki($text)
 {
     $puki = $text;
@@ -197,9 +197,9 @@ echo '<div class="momok">';
 preg_match_all('<a href="https://drive(.*?)">', $page, $mok);
 foreach($mok[1] as $key=>$item)
 {
-  echo puki("$key => $item <br>");
+  //echo puki("$key => $item <br>");
 }
-echo '</div>';
+//echo '</div>';
 
 $image = '/data-lazy-src="(.*?)" width="10/';  
   preg_match_all($image,$page,$data);
@@ -215,13 +215,16 @@ $gede = '/data-lazy-src="(.*?)" class="size-full/';
   echo $jamet;
   echo '</div>';
 
-echo '<div class="autis">';
-echo $titl,",-antiFansub bypasser";
-echo '</div>';
+//echo '<div class="autis">';
+//echo $titl,",-antiFansub bypasser";
+//echo '</div>';
 
 ?>
 </div>
+<!--
 <button title="Click to show/hide content" type="button" onclick="if(document.getElementById('spoiler') .style.display=='none') {document.getElementById('spoiler') .style.display=''}else{document.getElementById('spoiler') .style.display='none'}">array</button>
+-->
+
 <title><?php echo $titl,' - Download'; ?></title>
 
 </div></div></div>

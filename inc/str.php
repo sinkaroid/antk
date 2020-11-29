@@ -20,7 +20,7 @@ function wordFilter($text)
     $ambilkata = str_replace('Released', '', $ambilkata);
     $ambilkata = str_replace('Admin', '<font color=pink><b>Sin.</b></font>,', $ambilkata);
     
-    $ambilkata = str_replace("Check More Anime <a href='https://anitoki.com/archives/anime/", "<i class='fa fa-list' style='font-size:20px;color:white'></i> <a href='/page/list/series.php?id=", $ambilkata);
+    $ambilkata = str_replace("Check More Anime <a href='https://anitoki.com/anime/", "<i class='fa fa-list' style='font-size:20px;color:white'></i> <a href='/page/list/series.php?id=", $ambilkata);
     $ambilkata = str_replace('For more Episodes', '/m0re', $ambilkata);
     //openurl
     $ambilkata = str_replace('" title=', '" rel="nofollow" target="_blank" title=', $ambilkata);
